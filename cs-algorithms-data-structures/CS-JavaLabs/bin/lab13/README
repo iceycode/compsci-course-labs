@@ -1,0 +1,34 @@
+README for GraphLetters & Vertex classes
+**created/compiled using Eclipse Kepler IDE (Mac OSX)
+
+GraphLetters.java
+- makes use of adjacent matrix to graph letters
+- each letter has neighbors & assigned weight to neighbors
+- all letters bidirectional EXCEPT H and I (I unidirection to H)
+
+Vertex.java
+- a class instance to store letters as objects
+
+EXAMPLE OUTPUT:
+Begin breadth first traversal: 
+[Vertex: A ]
+[Vertex: B , Vertex: D , Vertex: G ]
+[Vertex: D , Vertex: G , Vertex: E , Vertex: F ]
+[Vertex: G , Vertex: E , Vertex: F ]
+[Vertex: E , Vertex: F ]
+[Vertex: F ]
+[Vertex: C ]
+[Vertex: H ]
+[Vertex: I ]
+[]
+Begin depth first traversal: 
+[]
+[Vertex: A , Vertex: B , Vertex: D , Vertex: G ]
+[Vertex: A , Vertex: B , Vertex: D , Vertex: G ]
+[Vertex: A , Vertex: B , Vertex: D , Vertex: G , Vertex: F , Vertex: H ]
+[Vertex: A , Vertex: B , Vertex: D , Vertex: G , Vertex: F , Vertex: H ]
+[Vertex: A , Vertex: B , Vertex: D , Vertex: G ]
+[Vertex: A , Vertex: B , Vertex: D , Vertex: G ]
+[Vertex: A , Vertex: B , Vertex: D , Vertex: G ]
+[Vertex: A , Vertex: B , Vertex: D , Vertex: G ]
+[Vertex: A , Vertex: B , Vertex: D ]

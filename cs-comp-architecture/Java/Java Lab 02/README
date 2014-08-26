@@ -1,0 +1,18 @@
+README lab02
+**used Eclipse IDE to run/compile code
+
+AddressScreen.java
+- a simple address screen wiht a tytle
+- shows name, street address, city & zip
+
+LottoGUI.java
+- a lottery interface with title CompSci Lotto
+- contains DRAW, RESET & QUIT buttons
+- also contains a talbe of number buttons
+- has text indicating progress & money
+
+DialogViewer.java
+- user enters f, c or m in command line argument
+- f displays file chooser & returns name of file
+- c shows confirmation dialog & returns what user pressed (Yes, no or cancel)
+- m displays a dialog box with message "Allen Jagoda"

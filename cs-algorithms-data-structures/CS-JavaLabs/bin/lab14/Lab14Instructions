@@ -1,0 +1,143 @@
+There are two problems in this laboratory assignment.  
+
+Problem 1:
+----------
+Implement a modified (optimized) version of Prim's algorithm to
+generate minimum spanning trees starting from each vertex of the tree.
+
+Test your algorithm on the graph below:
+
+                           A
+                          / \
+                         / | \
+                      6 /  |  \ 5
+                       /   |   \
+                      /    |    \
+                     B     | 1   C 
+                    | \    |    / |
+                    |  \   |   /  |
+                    |   \  |  /   |
+                  3 |  5 \ | / 5  | 2
+                    |     \|/     |
+                    |      D      |
+                    |     / \     |
+                    +  6 /   \ 4  +
+                    \   /     \  /
+                     \ /       \/
+                      E+-------+F
+                           5
+           
+For the graph, generate the spanning tree from each vertex 
+and print the cost.  The output should appear as follows:
+
+Begin Spanning Tree Prim
+     Start vertex: A
+       Add edge <A, D, 1.0>
+       Add edge <D, F, 4.0>
+       Add edge <F, C, 2.0>
+       Add edge <F, E, 5.0>
+       Add edge <E, B, 3.0>
+       Total cost: 15
+
+     Start vertex: B
+       Add edge <B, E, 3.0>
+       ...
+
+     Start vertex: F
+       Add edge <F, C, 2.0> <+-------
+       Add edge <F, D, 4.0>  
+       Add edge <F, E, 5.0> <+-------
+       Add edge <E, B, 3.0> <+-------
+       Add edge <E, D, 6.0> 
+End Spanning Tree Prim
+
+Problem 2:
+----------
+The pseudo code for Dijkstra's Shortest Path algorithm from one
+vertex to all vertices is given below (source: Data Structures, 2e,
+Koffman and Wolfgang, John Wiley and Sons, 2010).
+
+In the pseudo code below:
+
+S and V-S are sets; a set can be approximated by using a container 
+in Java.  You can use an ArrayList, a Vector, or one of your
+Linked List classes you wrote earlier, or even a simple array.
+
+d[] is a simple array of cumulative distance from the source
+vertex to the vertex under consideration (here, index 0 is 
+the first vertex, index 1 is the second vertex, and so on).
+
+p[] is a simple array that holds the predecessor node for the 
+vertex under consideration (here, index 0 is the first vertex, 
+index 1 is the second vertex, and so on).
+
+w(u,v) is the cost (or weight) of the edge connecting vertices
+u and v.
+
+Infinity below can be approximated by a large number, largest 
+than any of the costs in your graph.
+
+procedure Dijkstra_SP
+
+ Initialize S with start vertex, s, and V-S with remaining vertices.
+ For all v in V-S do
+    set p[v] to s.
+    if there is an edge (s,v)
+       set d[v] to w(s,v).
+    else
+       set d[v] to infinity.
+ done
+
+ while V-S is not empty do
+    For all u in V-S, find the smallest d[u].
+    Remove u from V-S and add u to S.
+    For all v adjacent to u in V-S do
+       if d[u] + w(u,v) < d[v] then
+          Set d[v] to d[u] + w(u,v).
+          Set p[v] to u.
+       End if
+    done
+ done 
+
+End procedure
+
+When the algorithm is done, the array element d[i] contains
+the shortest distance from the source to the vertex represented
+by d[i], and the array element p[i] contains the predecessor
+vertex for the vertex represented by p[i].
+
+So, let's assume you have a four vertex graph with vertices A, B, 
+C, D.  Then the size of your p[] and d[] arrays is 4, and the index
+i = 0 .. 3 represents A, B, C, D, respectively.  Let's also
+assume that the start index was 3 (i.e., vertex D).  Then, at the
+end of the algorithm, d[0] contains the shortest distance from
+D to A and p[0] contains the predecessor node to get to A.
+Similary, d[1] contains the shortest distance from D to B, and
+p[1] contains the predecessor node to get to B.
+
+Write and test Dijkstra's Shortest Path algorithm corresponding
+to the pseudo code above.  Test it on the graph we used in
+the class, plus any other graph of your choice.
+
+First, debug and test your code with the 7-vertex graph 
+we used in class.  Feel free to run your program on any additional
+graph; however, please submit a picture of any graph that
+you run your program on.
+
+Your output should be of the form:
+
+  Start vertex: A
+  A --> B : Cost is 10, Path is A->B
+  A --> C : Cost is 12, Path is A->B->C
+  ...
+
+Make sure that you use the adjacency matrix to read in a
+graph topology.  The input to the program should be two things:
+a graph topology file and the starting vertex.
+
+Submit a README file containing any compilation instructions, 
+a Java source code file, and corresponding class files and
+data files for the graph.  Also submit instructions on the
+format of your input file that describes the graph.  I will
+like to test your program with other arbitrary graphs and will
+need to know how to import a graph into your program.

@@ -1,0 +1,87 @@
+Lab 14
+**created/compiled/ran with Eclipse
+
+AdjMatrix.java
+- class to construct new graphs
+- gets passed into non-default WeightedGraph.java
+
+TestMPS.java
+- uesd to test Prim & Dijkstra algorithms
+- new graph input before each test
+  - allows graphs to be manipulated implementing algorithms
+
+WeightedGraph.java
+- contains the weighted graphs
+- creates Edge and Vertex objects by using Adjacency Matrix
+- stores Edge and Vertex objects in an array
+
+PrimTree.java
+- uses WeightedGraph to run through and find minimal spanning tree
+- marks visited graph vectors & spans graph till all visited
+- places into a growing tree
+- outputs all the costs of spanning from different starting vertices
+
+DijkstraAlgorithm.java
+- calculates the shortest paths between 2 vertices in graph
+
+EXAMPLE OUTPUT:
+Begin Spanning Tree Prim: 
+Start vertex : A
+<0, 3, 1.0>
+<3, 5, 4.0>
+<5, 2, 2.0>
+<2, 3, 5.0>
+<3, 1, 5.0>
+<1, 4, 3.0>
+Total cost: 20.0
+Find shortest path from A
+Begin Spanning Tree Prim: 
+Start vertex : B
+<1, 4, 3.0>
+<4, 5, 5.0>
+<5, 2, 2.0>
+<2, 0, 5.0>
+<0, 3, 1.0>
+<3, 2, 5.0>
+Total cost: 21.0
+Find shortest path from B
+Begin Spanning Tree Prim: 
+Start vertex : C
+<2, 5, 2.0>
+<5, 3, 4.0>
+<3, 0, 1.0>
+<0, 1, 6.0>
+<1, 4, 3.0>
+<4, 3, 6.0>
+Total cost: 22.0
+Find shortest path from C
+Begin Spanning Tree Prim: 
+Start vertex : D
+<3, 0, 1.0>
+<0, 2, 5.0>
+<2, 5, 2.0>
+<5, 4, 5.0>
+<4, 1, 3.0>
+<1, 0, 6.0>
+Total cost: 22.0
+Find shortest path from D
+Begin Spanning Tree Prim: 
+Start vertex : E
+<4, 1, 3.0>
+<1, 3, 5.0>
+<3, 0, 1.0>
+<0, 2, 5.0>
+<2, 5, 2.0>
+<5, 4, 5.0>
+Total cost: 21.0
+Find shortest path from E
+Begin Spanning Tree Prim: 
+Start vertex : F
+<5, 2, 2.0>
+<2, 0, 5.0>
+<0, 3, 1.0>
+<3, 1, 5.0>
+<1, 4, 3.0>
+<4, 3, 6.0>
+Total cost: 22.0
+Find shortest path from F

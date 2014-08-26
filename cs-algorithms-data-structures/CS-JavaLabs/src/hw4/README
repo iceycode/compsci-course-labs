@@ -1,0 +1,44 @@
+README WalletTest & Wallet
+**used Eclipse IDE to create/compile code
+
+Coin.java
+- a class with attributes of coin name & value (both String)
+- setter, getter, default/nondefault constructors included
+- also included toString & equals method
+
+Wallet.java
+- a linked list data structure 
+- as a parameter has Coin
+- contains constructor, add, remove, and other methods
+
+EXAMPLE OUTPUT:
+Please enter the name of a coin or Q to quit (ie. dime, nickel)
+dime
+Please enter the value of that coin (ie. 10 cents, 1 cents, 100 eurocents)
+10 cents
+coin name (coin value) : number of coins in wallet
+dime (10 cents): 1 
+
+Please enter the name of a coin or Q to quit (ie. dime, nickel)
+nickel
+Please enter the value of that coin (ie. 10 cents, 1 cents, 100 eurocents)
+5 cents
+coin name (coin value) : number of coins in wallet
+dime (10 cents): 1 
+nickel (5 cents): 2 
+
+Please enter the name of a coin or Q to quit (ie. dime, nickel)
+penny
+Please enter the value of that coin (ie. 10 cents, 1 cents, 100 eurocents)
+1 cent
+coin name (coin value) : number of coins in wallet
+dime (10 cents): 1 
+nickel (5 cents): 2 
+penny (1 cent): 3 
+
+Please enter the name of a coin or Q to quit (ie. dime, nickel)
+Q
+Finished adding to wallet.
+dime (10 cents): 1 
+nickel (5 cents): 2 
+penny (1 cent): 3 
